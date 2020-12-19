@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 4)
+    (drawings 11)
     (tracks 74)
     (zones 0)
     (modules 12)
@@ -550,10 +550,17 @@
       (net 11 "Net-(J4-Pad1)"))
   )
 
-  (gr_line (start 100 144) (end 100 100) (layer Edge.Cuts) (width 0.05) (tstamp 5FB03EFE))
-  (gr_line (start 122 144) (end 100 144) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 122 100) (end 122 144) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 100 100) (end 122 100) (layer Edge.Cuts) (width 0.05) (tstamp 5FDEA00F))
+  (gr_arc (start 101 143) (end 100 143) (angle -90) (layer Edge.Cuts) (width 0.05))
+  (gr_arc (start 121 143) (end 121 144) (angle -90) (layer Edge.Cuts) (width 0.05))
+  (gr_arc (start 121 101) (end 122 101) (angle -90) (layer Edge.Cuts) (width 0.05))
+  (gr_arc (start 101 101) (end 101 100) (angle -90) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 122 143) (end 122 130.5) (layer Edge.Cuts) (width 0.05) (tstamp 5FDE8CD8))
+  (gr_arc (start 130 122) (end 122 113.5) (angle -93.47140918) (layer Edge.Cuts) (width 0.05))
+  (gr_circle (center 111.5 122) (end 121.5 122) (layer Dwgs.User) (width 0.15))
+  (gr_line (start 100 143) (end 100 101) (layer Edge.Cuts) (width 0.05) (tstamp 5FB03EFE))
+  (gr_line (start 121 144) (end 101 144) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 122 101) (end 122 113.5) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 101 100) (end 121 100) (layer Edge.Cuts) (width 0.05) (tstamp 5FDEA00F))
 
   (segment (start 116 138.75) (end 116.05 138.75) (width 0.5) (layer F.Cu) (net 1))
   (segment (start 115.5 137.4) (end 111.8 137.4) (width 0.25) (layer F.Cu) (net 1))
@@ -630,14 +637,14 @@
   (segment (start 119 105.5) (end 119 103) (width 0.5) (layer F.Cu) (net 11))
   (segment (start 102.100011 111.699989) (end 105.6 108.2) (width 0.5) (layer F.Cu) (net 11))
 
-  (zone (net 9) (net_name "Net-(J2-Pad1)") (layer F.Cu) (tstamp 0) (hatch edge 0.508)
+  (zone (net 9) (net_name "Net-(J2-Pad1)") (layer F.Cu) (tstamp 5FDE8C6B) (hatch edge 0.508)
     (priority 1)
     (connect_pads yes (clearance 0.25))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 113.4 105) (xy 108.6 105) (xy 108.6 99) (xy 113.4 99)
+        (xy 113.4 105) (xy 108.6 105) (xy 108.6 99.5) (xy 113.4 99.5)
       )
     )
     (filled_polygon
@@ -646,54 +653,61 @@
       )
     )
   )
-  (zone (net 10) (net_name "Net-(J3-Pad1)") (layer F.Cu) (tstamp 0) (hatch edge 0.508)
+  (zone (net 10) (net_name "Net-(J3-Pad1)") (layer F.Cu) (tstamp 5FDE8C68) (hatch edge 0.508)
     (priority 1)
     (connect_pads yes (clearance 0.25))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 105 105) (xy 100 105) (xy 100 99) (xy 105 99)
+        (xy 105 105) (xy 100 105) (xy 100 99.5) (xy 105 99.5)
       )
     )
     (filled_polygon
       (pts
-        (xy 104.873 104.873) (xy 100.402 104.873) (xy 100.402 100.402) (xy 104.873 100.402)
+        (xy 104.873 104.873) (xy 100.402 104.873) (xy 100.402 101.019658) (xy 100.415279 100.884227) (xy 100.448905 100.772852)
+        (xy 100.503518 100.670141) (xy 100.577046 100.579986) (xy 100.666682 100.505832) (xy 100.769011 100.450503) (xy 100.880141 100.416103)
+        (xy 101.014318 100.402) (xy 104.873 100.402)
       )
     )
   )
-  (zone (net 11) (net_name "Net-(J4-Pad1)") (layer F.Cu) (tstamp 0) (hatch edge 0.508)
+  (zone (net 11) (net_name "Net-(J4-Pad1)") (layer F.Cu) (tstamp 5FDE8C65) (hatch edge 0.508)
     (priority 1)
     (connect_pads yes (clearance 0.25))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 122 105) (xy 117 105) (xy 117 99) (xy 122 99)
+        (xy 122 105) (xy 117 105) (xy 117 99.5) (xy 122 99.5)
       )
     )
     (filled_polygon
       (pts
-        (xy 121.598 104.873) (xy 117.127 104.873) (xy 117.127 100.402) (xy 121.598 100.402)
+        (xy 121.115773 100.415279) (xy 121.227148 100.448905) (xy 121.329859 100.503518) (xy 121.420014 100.577046) (xy 121.494168 100.666682)
+        (xy 121.549497 100.769011) (xy 121.583897 100.880141) (xy 121.598 101.014318) (xy 121.598 104.873) (xy 117.127 104.873)
+        (xy 117.127 100.402) (xy 120.980342 100.402)
       )
     )
   )
-  (zone (net 3) (net_name /TOUCH) (layer F.Cu) (tstamp 0) (hatch edge 0.508)
+  (zone (net 3) (net_name /TOUCH) (layer F.Cu) (tstamp 5FDE8C62) (hatch edge 0.508)
     (priority 1)
     (connect_pads yes (clearance 0.25))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 122 146) (xy 100 146) (xy 100 141) (xy 122 141)
+        (xy 122 144.5) (xy 100 144.5) (xy 100 141) (xy 122 141)
       )
     )
     (filled_polygon
       (pts
         (xy 101.205798 141.140304) (xy 101.29735 141.189239) (xy 101.39669 141.219374) (xy 101.5 141.229549) (xy 101.525881 141.227)
         (xy 114.154119 141.227) (xy 114.18 141.229549) (xy 114.205881 141.227) (xy 114.28331 141.219374) (xy 114.38265 141.189239)
-        (xy 114.474202 141.140304) (xy 114.490413 141.127) (xy 121.598001 141.127) (xy 121.598001 143.598) (xy 100.402 143.598)
-        (xy 100.402 141.127) (xy 101.189587 141.127)
+        (xy 114.474202 141.140304) (xy 114.490413 141.127) (xy 121.598 141.127) (xy 121.598 142.980343) (xy 121.58472 143.115776)
+        (xy 121.551095 143.227146) (xy 121.496482 143.32986) (xy 121.422954 143.420014) (xy 121.333318 143.494168) (xy 121.230989 143.549497)
+        (xy 121.119859 143.583897) (xy 120.985681 143.598) (xy 101.019657 143.598) (xy 100.884224 143.58472) (xy 100.772854 143.551095)
+        (xy 100.67014 143.496482) (xy 100.579986 143.422954) (xy 100.505832 143.333318) (xy 100.450503 143.230989) (xy 100.416103 143.119859)
+        (xy 100.402 142.985681) (xy 100.402 141.127) (xy 101.189587 141.127)
       )
     )
   )
