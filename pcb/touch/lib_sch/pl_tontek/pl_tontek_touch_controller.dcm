@@ -1,0 +1,18 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TTP223E-BA6
+D Tontek Design Tech SOT-23-6 Touch Screen Controller IC
+F https://datasheet.lcsc.com/szlcsc/Tontek-Design-Tech-TTP223E-BA6_C129457.pdf
+$ENDCMP
+#
+$CMP TTP223E-HA6
+D Tontek Design Tech SOT-23-6 Touch Screen Controller IC
+F https://datasheet.lcsc.com/szlcsc/1810251711_Tontek-Design-Tech-TTP223E-HA6_C129459.pdf
+$ENDCMP
+#
+$CMP TTP223N-HA6
+D Tontek Design Tech SOT-23-6 Touch Screen Controller IC
+F https://datasheet.lcsc.com/szlcsc/Tontek-Design-Tech-TTP223N-HA6_C93723.pdf
+$ENDCMP
+#
+#End Doc Library
