@@ -33,12 +33,17 @@ uint8_t twinkle_led = 0;        /* current led to twinkel is leave off for N loo
 uint8_t loop_count = 0;         /* current loop number */
 uint8_t loop_off = 0;           /* twinkle led is off for this many loops
                                  * set using rand() and is between 0 and LOOP_MAX */
-#define LOOP_MAX    16
+#define LOOP_MAX    8
+#define TWINKLE_CHANCE  48      /* needs a better name
+                                 * this is upper value  of next random led that will twinkel
+                                 * with only 6 LEDs higher values will not twinkel
+                                 * so settng this higher will give a N in 6 chance an LED will twinkel */
 
 /* Funciton Prototypes */
 void initPCINT0(void);
 void initTimer0(void);
 void charliePlex(int8_t led);
+void charliePlexTristateAll(void);
 
 int main (void) {
     /* make sure LEDs are off */
@@ -83,7 +88,7 @@ int main (void) {
                 if (loop_count > loop_off) {
                     loop_count = 0;     /* reset loop count */
                     loop_off = random() % LOOP_MAX;  /* set a new led off for n loop counts */
-                    twinkle_led = random() % 24; /* select random led to twinkle */
+                    twinkle_led = random() % TWINKLE_CHANCE; /* select random led to twinkle */
                 }
 
                 break;
@@ -121,11 +126,13 @@ ISR(TIM0_COMPA_vect) {
 
 /* charlieplex, turn on LED number */
 void charliePlex(int8_t led) {
+    /* set all as input to tristate before setting up pin modes below */
+    charliePlexTristateAll();
+
     switch (led) {
         case 0:
-            /* set all as input to tristate */
-            DDRB &= ~(BIT0 + BIT1 + BIT2);
-            PORTB &= ~(BIT0 + BIT1 + BIT2);
+            /* set all as input to tristate so no LED is on */
+            charliePlexTristateAll();
             break;
         case 1:
             DDRB |= (BIT0 + BIT1);  /* set PB0 and PB1 as outputs */
@@ -170,10 +177,15 @@ void charliePlex(int8_t led) {
             PORTB &= ~BIT0;         /* set PB0 low */
             break;    
         default:
-            /* set all as input to tristate */
-            DDRB &= ~(BIT0 + BIT1 + BIT2);
-            PORTB &= ~(BIT0 + BIT1 + BIT2);
+            /* something is wrong, set all as input to tristate */
+            charliePlexTristateAll();
             break;
     }
 
+}
+
+void charliePlexTristateAll(void) {
+    /* set all as input to tristate */
+    DDRB &= ~(BIT0 + BIT1 + BIT2);
+    PORTB &= ~(BIT0 + BIT1 + BIT2);
 }
