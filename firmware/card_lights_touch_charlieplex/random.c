@@ -5,7 +5,7 @@
 
 #include "random.h"
 
-static uint16_t random_number = 0;
+static uint16_t random_number = 0xabcd;
 
 static uint16_t lfsr16_next(uint16_t n) {
 	return (n >> 0x01U) ^ (-(n & 0x01U) & 0xB400U);

@@ -1,1 +1,2 @@
-.vscode/avr.build/obj/main.o: main.c main.h state_machine.h random.h
+.vscode/avr.build/obj/main.o: main.c main.h charlieplex.h state_machine.h \
+ twinkle.h random.h
