@@ -108,8 +108,12 @@ void initPCINT0(void) {
 
 /* pin change interrupt service routine */
 ISR(PCINT0_vect){
-    state = RUN;    /* wake up and run */
-    enableTimer0(); /* enable timer0 to set auto power off */
+    if (state == SLEEP) {
+        state = RUN;    /* wake up and run */
+        enableTimer0(); /* enable timer0 to set auto power off */
+    } else {
+        state = SLEEP;
+    }
 }
 
 /* eanble timer0 to trigger ISR for auto power off */
