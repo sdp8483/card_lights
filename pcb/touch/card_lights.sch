@@ -524,10 +524,10 @@ Wire Notes Line
 Text Notes 9000 5700 2    50   ~ 0
 THIS AREA FOR REFERENCE ONLY
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 5FEE0F0C
 P 7500 2650
-F 0 "C?" H 7525 2750 50  0000 L CNN
+F 0 "C3" H 7525 2750 50  0000 L CNN
 F 1 "10p" H 7525 2550 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7538 2500 50  0001 C CNN
 F 3 "~" H 7500 2650 50  0001 C CNN
@@ -540,10 +540,10 @@ Connection ~ 7500 2400
 Wire Wire Line
 	7500 2400 7700 2400
 $Comp
-L power:GND #PWR?
+L power:GND #PWR06
 U 1 1 5FEE26DA
 P 7500 2850
-F 0 "#PWR?" H 7500 2600 50  0001 C CNN
+F 0 "#PWR06" H 7500 2600 50  0001 C CNN
 F 1 "GND" H 7500 2700 50  0000 C CNN
 F 2 "" H 7500 2850 50  0001 C CNN
 F 3 "" H 7500 2850 50  0001 C CNN
@@ -552,4 +552,24 @@ F 3 "" H 7500 2850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7500 2850 7500 2800
+Wire Notes Line style solid
+	7000 3500 9000 3500
+Wire Notes Line style solid
+	9000 3500 9000 3250
+Wire Notes Line style solid
+	9000 3250 7000 3250
+Text Notes 7500 1850 0    50   ~ 0
+Use C3 to adjust touch sensitivity\n1pF to 50pF suggested in datasheet\n10pF seems to be about right in prototype testing
+Wire Notes Line style solid
+	7500 2350 7500 1600
+Wire Notes Line style solid
+	7500 1600 9450 1600
+Wire Notes Line style solid
+	9450 1600 9450 1850
+Wire Notes Line style solid
+	9450 1850 7500 1850
+Wire Notes Line style solid
+	7000 3050 7000 3500
+Text Notes 8850 2450 0    50   ~ 0
+For touch pad use flood fill on PCB back
 $EndSCHEMATC
