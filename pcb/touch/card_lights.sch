@@ -148,7 +148,7 @@ F 3 "" H 8300 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 2400 7700 2400
+	6700 2400 7500 2400
 Text Label 7000 2400 2    50   ~ 0
 TOUCH
 $Comp
@@ -523,4 +523,33 @@ Wire Notes Line
 	9000 4200 9000 5700
 Text Notes 9000 5700 2    50   ~ 0
 THIS AREA FOR REFERENCE ONLY
+$Comp
+L Device:C C?
+U 1 1 5FEE0F0C
+P 7500 2650
+F 0 "C?" H 7525 2750 50  0000 L CNN
+F 1 "10p" H 7525 2550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7538 2500 50  0001 C CNN
+F 3 "~" H 7500 2650 50  0001 C CNN
+	1    7500 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2500 7500 2400
+Connection ~ 7500 2400
+Wire Wire Line
+	7500 2400 7700 2400
+$Comp
+L power:GND #PWR?
+U 1 1 5FEE26DA
+P 7500 2850
+F 0 "#PWR?" H 7500 2600 50  0001 C CNN
+F 1 "GND" H 7500 2700 50  0000 C CNN
+F 2 "" H 7500 2850 50  0001 C CNN
+F 3 "" H 7500 2850 50  0001 C CNN
+	1    7500 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2850 7500 2800
 $EndSCHEMATC
