@@ -571,12 +571,12 @@ Wire Notes Line style solid
 Text Notes 8850 2450 0    50   ~ 0
 For touch pad use flood fill on PCB back
 $Comp
-L Device:D D?
+L Device:D D7
 U 1 1 5FF0713E
 P 5250 2400
-F 0 "D?" H 5250 2500 50  0000 C CNN
+F 0 "D7" H 5250 2500 50  0000 C CNN
 F 1 "D" H 5250 2300 50  0000 C CNN
-F 2 "" H 5250 2400 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 5250 2400 50  0001 C CNN
 F 3 "~" H 5250 2400 50  0001 C CNN
 	1    5250 2400
 	1    0    0    -1  
@@ -586,45 +586,45 @@ Wire Wire Line
 Wire Wire Line
 	5400 2400 5500 2400
 $Comp
-L Connector:TestPoint TP?
+L Connector:TestPoint TP4
 U 1 1 5FF0CDEF
 P 3400 4600
-F 0 "TP?" H 3400 4870 50  0000 C CNN
+F 0 "TP4" H 3400 4870 50  0000 C CNN
 F 1 "TestPoint" H 3400 4800 50  0000 C CNN
-F 2 "" H 3600 4600 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3600 4600 50  0001 C CNN
 F 3 "~" H 3600 4600 50  0001 C CNN
 	1    3400 4600
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP?
+L Connector:TestPoint TP5
 U 1 1 5FF0DBF1
 P 3800 4600
-F 0 "TP?" H 3800 4870 50  0000 C CNN
+F 0 "TP5" H 3800 4870 50  0000 C CNN
 F 1 "TestPoint" H 3800 4800 50  0000 C CNN
-F 2 "" H 4000 4600 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4000 4600 50  0001 C CNN
 F 3 "~" H 4000 4600 50  0001 C CNN
 	1    3800 4600
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP?
+L Connector:TestPoint TP3
 U 1 1 5FF0DEB0
 P 3000 4600
-F 0 "TP?" H 3000 4870 50  0000 C CNN
+F 0 "TP3" H 3000 4870 50  0000 C CNN
 F 1 "TestPoint" H 3000 4800 50  0000 C CNN
-F 2 "" H 3200 4600 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3200 4600 50  0001 C CNN
 F 3 "~" H 3200 4600 50  0001 C CNN
 	1    3000 4600
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP?
+L Connector:TestPoint TP1
 U 1 1 5FF0E406
 P 2200 4600
-F 0 "TP?" H 2200 4870 50  0000 C CNN
+F 0 "TP1" H 2200 4870 50  0000 C CNN
 F 1 "TestPoint" H 2200 4800 50  0000 C CNN
-F 2 "" H 2400 4600 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2400 4600 50  0001 C CNN
 F 3 "~" H 2400 4600 50  0001 C CNN
 	1    2200 4600
 	1    0    0    -1  
@@ -636,10 +636,10 @@ PB1
 Text Label 1600 5150 0    50   ~ 0
 PB3
 $Comp
-L power:+3V0 #PWR?
+L power:+3V0 #PWR0103
 U 1 1 5FF139D5
 P 1600 4800
-F 0 "#PWR?" H 1600 4650 50  0001 C CNN
+F 0 "#PWR0103" H 1600 4650 50  0001 C CNN
 F 1 "+3V0" H 1600 4940 50  0000 C CNN
 F 2 "" H 1600 4800 50  0001 C CNN
 F 3 "" H 1600 4800 50  0001 C CNN
@@ -647,10 +647,10 @@ F 3 "" H 1600 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0104
 U 1 1 5FF13F03
 P 1600 5300
-F 0 "#PWR?" H 1600 5050 50  0001 C CNN
+F 0 "#PWR0104" H 1600 5050 50  0001 C CNN
 F 1 "GND" H 1600 5150 50  0000 C CNN
 F 2 "" H 1600 5300 50  0001 C CNN
 F 3 "" H 1600 5300 50  0001 C CNN
@@ -658,12 +658,12 @@ F 3 "" H 1600 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP?
+L Connector:TestPoint TP2
 U 1 1 5FF35544
 P 2600 4600
-F 0 "TP?" H 2600 4870 50  0000 C CNN
+F 0 "TP2" H 2600 4870 50  0000 C CNN
 F 1 "TestPoint" H 2600 4800 50  0000 C CNN
-F 2 "" H 2800 4600 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2800 4600 50  0001 C CNN
 F 3 "~" H 2800 4600 50  0001 C CNN
 	1    2600 4600
 	1    0    0    -1  
