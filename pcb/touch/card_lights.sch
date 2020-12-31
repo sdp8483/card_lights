@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Touch Card Lights"
-Date "2020-12-19"
-Rev ""
+Date "2020-12-31"
+Rev "A"
 Comp "Perry Leumas"
 Comment1 ""
 Comment2 ""
@@ -585,4 +585,123 @@ Wire Wire Line
 	5000 2400 5100 2400
 Wire Wire Line
 	5400 2400 5500 2400
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FF0CDEF
+P 3400 4600
+F 0 "TP?" H 3400 4870 50  0000 C CNN
+F 1 "TestPoint" H 3400 4800 50  0000 C CNN
+F 2 "" H 3600 4600 50  0001 C CNN
+F 3 "~" H 3600 4600 50  0001 C CNN
+	1    3400 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FF0DBF1
+P 3800 4600
+F 0 "TP?" H 3800 4870 50  0000 C CNN
+F 1 "TestPoint" H 3800 4800 50  0000 C CNN
+F 2 "" H 4000 4600 50  0001 C CNN
+F 3 "~" H 4000 4600 50  0001 C CNN
+	1    3800 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FF0DEB0
+P 3000 4600
+F 0 "TP?" H 3000 4870 50  0000 C CNN
+F 1 "TestPoint" H 3000 4800 50  0000 C CNN
+F 2 "" H 3200 4600 50  0001 C CNN
+F 3 "~" H 3200 4600 50  0001 C CNN
+	1    3000 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FF0E406
+P 2200 4600
+F 0 "TP?" H 2200 4870 50  0000 C CNN
+F 1 "TestPoint" H 2200 4800 50  0000 C CNN
+F 2 "" H 2400 4600 50  0001 C CNN
+F 3 "~" H 2400 4600 50  0001 C CNN
+	1    2200 4600
+	1    0    0    -1  
+$EndComp
+Text Label 1600 4950 0    50   ~ 0
+PB0
+Text Label 1600 5050 0    50   ~ 0
+PB1
+Text Label 1600 5150 0    50   ~ 0
+PB3
+$Comp
+L power:+3V0 #PWR?
+U 1 1 5FF139D5
+P 1600 4800
+F 0 "#PWR?" H 1600 4650 50  0001 C CNN
+F 1 "+3V0" H 1600 4940 50  0000 C CNN
+F 2 "" H 1600 4800 50  0001 C CNN
+F 3 "" H 1600 4800 50  0001 C CNN
+	1    1600 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF13F03
+P 1600 5300
+F 0 "#PWR?" H 1600 5050 50  0001 C CNN
+F 1 "GND" H 1600 5150 50  0000 C CNN
+F 2 "" H 1600 5300 50  0001 C CNN
+F 3 "" H 1600 5300 50  0001 C CNN
+	1    1600 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FF35544
+P 2600 4600
+F 0 "TP?" H 2600 4870 50  0000 C CNN
+F 1 "TestPoint" H 2600 4800 50  0000 C CNN
+F 2 "" H 2800 4600 50  0001 C CNN
+F 3 "~" H 2800 4600 50  0001 C CNN
+	1    2600 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4950 2600 4950
+Wire Wire Line
+	2600 4950 2600 4600
+Wire Wire Line
+	1600 5050 3000 5050
+Wire Wire Line
+	3000 5050 3000 4600
+Wire Wire Line
+	1600 5150 3400 5150
+Wire Wire Line
+	3400 5150 3400 4600
+Wire Wire Line
+	1600 4800 1600 4850
+Wire Wire Line
+	1600 4850 2200 4850
+Wire Wire Line
+	2200 4850 2200 4600
+Wire Wire Line
+	1600 5300 1600 5250
+Wire Wire Line
+	1600 5250 3800 5250
+Wire Wire Line
+	3800 5250 3800 4600
+Text Notes 1400 4250 0    50   ~ 0
+In System Programming Test Points
+Wire Notes Line
+	1400 4250 4000 4250
+Wire Notes Line
+	4000 5500 1400 5500
+Wire Notes Line
+	1400 5500 1400 4150
+Wire Notes Line
+	1400 4150 4000 4150
+Wire Notes Line
+	4000 4150 4000 5500
 $EndSCHEMATC
