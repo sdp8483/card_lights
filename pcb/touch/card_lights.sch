@@ -163,24 +163,7 @@ $EndComp
 Wire Wire Line
 	1400 1850 1400 2000
 Connection ~ 1400 2000
-$Comp
-L power:+3V0 #PWR05
-U 1 1 5FE0499E
-P 7000 2700
-F 0 "#PWR05" H 7000 2550 50  0001 C CNN
-F 1 "+3V0" H 7000 2840 50  0000 C CNN
-F 2 "" H 7000 2700 50  0001 C CNN
-F 3 "" H 7000 2700 50  0001 C CNN
-	1    7000 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 3000 7000 3000
-Wire Wire Line
-	7000 3000 7000 2700
 NoConn ~ 6700 2900
-Text Notes 7000 3500 0    50   ~ 0
-PULL TOG HIGH TO TOGGLE OUTPUT\nCURRENT DRAW SEEMS THE SAME FOR BOTH MODES\nEASIER IN CODE TO TOGGLE
 $Comp
 L Device:C C2
 U 1 1 5FE06C2D
@@ -550,12 +533,6 @@ F 3 "" H 7500 2850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7500 2850 7500 2800
-Wire Notes Line style solid
-	7000 3500 9000 3500
-Wire Notes Line style solid
-	9000 3500 9000 3250
-Wire Notes Line style solid
-	9000 3250 7000 3250
 Text Notes 7500 1850 0    50   ~ 0
 Use C3 to adjust touch sensitivity\n1pF to 50pF suggested in datasheet\n10pF seems to be about right in prototype testing
 Wire Notes Line style solid
@@ -566,8 +543,6 @@ Wire Notes Line style solid
 	9450 1600 9450 1850
 Wire Notes Line style solid
 	9450 1850 7500 1850
-Wire Notes Line style solid
-	7000 3050 7000 3500
 Text Notes 8850 2450 0    50   ~ 0
 For touch pad use flood fill on PCB back
 Wire Wire Line
@@ -706,4 +681,5 @@ F 3 "~" H 5250 2400 50  0001 C CNN
 $EndComp
 Text Notes 4750 2200 0    50   ~ 0
 Cut jumper before programming
+NoConn ~ 6700 3000
 $EndSCHEMATC
