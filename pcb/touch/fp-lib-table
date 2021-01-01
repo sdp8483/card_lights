@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name pl_Tactile_Switch_SMD)(type KiCad)(uri ${KIPRJMOD}/lib_fp/pl_Tactile_Switch_SMD.pretty)(options "")(descr ""))
   (lib (name pl_Linx_battery_holder)(type KiCad)(uri ${KIPRJMOD}/lib_fp/pl_Linx_battery_holder.pretty)(options "")(descr ""))
+  (lib (name PL_logo)(type KiCad)(uri ${KIPRJMOD}/lib_fp/PL_logo.pretty)(options "")(descr ""))
 )

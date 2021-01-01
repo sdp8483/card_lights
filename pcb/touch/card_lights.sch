@@ -140,13 +140,13 @@ U 1 1 5FE01661
 P 8300 2400
 F 0 "J1" H 8300 1850 50  0000 C CNN
 F 1 "TOUCH PAD" H 8300 2400 50  0000 C CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 8300 2400 50  0001 C CNN
+F 2 "" H 8300 2400 50  0001 C CNN
 F 3 "" H 8300 2400 50  0001 C CNN
 	1    8300 2400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 2400 7500 2400
+	6700 2400 7150 2400
 Text Label 7000 2400 2    50   ~ 0
 TOUCH
 $Comp
@@ -507,44 +507,35 @@ THIS AREA FOR REFERENCE ONLY
 $Comp
 L Device:C C3
 U 1 1 5FEE0F0C
-P 7500 2650
-F 0 "C3" H 7525 2750 50  0000 L CNN
-F 1 "10p" H 7525 2550 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7538 2500 50  0001 C CNN
-F 3 "~" H 7500 2650 50  0001 C CNN
-	1    7500 2650
+P 7150 2900
+F 0 "C3" H 7175 3000 50  0000 L CNN
+F 1 "10p" H 7175 2800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7188 2750 50  0001 C CNN
+F 3 "~" H 7150 2900 50  0001 C CNN
+	1    7150 2900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7500 2500 7500 2400
-Connection ~ 7500 2400
-Wire Wire Line
-	7500 2400 7700 2400
+	7150 2500 7150 2400
 $Comp
 L power:GND #PWR06
 U 1 1 5FEE26DA
-P 7500 2850
-F 0 "#PWR06" H 7500 2600 50  0001 C CNN
-F 1 "GND" H 7500 2700 50  0000 C CNN
-F 2 "" H 7500 2850 50  0001 C CNN
-F 3 "" H 7500 2850 50  0001 C CNN
-	1    7500 2850
+P 7150 3100
+F 0 "#PWR06" H 7150 2850 50  0001 C CNN
+F 1 "GND" H 7150 2950 50  0000 C CNN
+F 2 "" H 7150 3100 50  0001 C CNN
+F 3 "" H 7150 3100 50  0001 C CNN
+	1    7150 3100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7500 2850 7500 2800
-Text Notes 7500 1850 0    50   ~ 0
-Use C3 to adjust touch sensitivity\n1pF to 50pF suggested in datasheet\n10pF seems to be about right in prototype testing
+	7150 3100 7150 3050
 Wire Notes Line style solid
-	7500 2350 7500 1600
+	8950 3050 8950 3300
 Wire Notes Line style solid
-	7500 1600 9450 1600
-Wire Notes Line style solid
-	9450 1600 9450 1850
-Wire Notes Line style solid
-	9450 1850 7500 1850
+	8950 3300 7300 3300
 Text Notes 8850 2450 0    50   ~ 0
-For touch pad use flood fill on PCB back
+For touch pad use flood fill
 Wire Wire Line
 	5000 2400 5150 2400
 Wire Wire Line
@@ -673,7 +664,7 @@ L Device:Jumper_NC_Small JP1
 U 1 1 5FFB6D8B
 P 5250 2400
 F 0 "JP1" H 5250 2480 50  0000 C CNN
-F 1 "PROG" H 5260 2340 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 5260 2340 50  0001 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 5250 2400 50  0001 C CNN
 F 3 "~" H 5250 2400 50  0001 C CNN
 	1    5250 2400
@@ -682,4 +673,67 @@ $EndComp
 Text Notes 4750 2200 0    50   ~ 0
 Cut jumper before programming
 NoConn ~ 6700 3000
+Wire Notes Line style solid
+	7300 3300 7300 3050
+Wire Notes Line style solid
+	7300 3050 8950 3050
+Text Notes 7300 3300 0    50   ~ 0
+Use C3 to adjust touch sensitivity\n1pF to 50pF suggested in datasheet\nCut JP2 to remove C3 for max sensitivity
+Wire Wire Line
+	7150 2750 7150 2700
+$Comp
+L Device:Jumper_NC_Small JP2
+U 1 1 5FF05A9A
+P 7150 2600
+F 0 "JP2" H 7150 2680 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 7160 2540 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 7150 2600 50  0001 C CNN
+F 3 "~" H 7150 2600 50  0001 C CNN
+	1    7150 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP4
+U 1 1 5FF37EA2
+P 7550 2400
+F 0 "JP4" H 7550 2480 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 7560 2340 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 7550 2400 50  0001 C CNN
+F 3 "~" H 7550 2400 50  0001 C CNN
+	1    7550 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP3
+U 1 1 5FF38261
+P 7150 2250
+F 0 "JP3" H 7150 2330 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 7160 2190 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7150 2250 50  0001 C CNN
+F 3 "~" H 7150 2250 50  0001 C CNN
+	1    7150 2250
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7150 2400
+Wire Wire Line
+	7650 2400 7700 2400
+Wire Wire Line
+	7150 2350 7150 2400
+Text Notes 7000 1750 0    50   ~ 0
+optional pad to solder \noffboard tochpad
+Wire Wire Line
+	7150 2400 7450 2400
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5FF5D320
+P 7150 2100
+F 0 "TP6" H 7150 2370 50  0000 C CNN
+F 1 "TestPoint" H 7150 2300 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_3.0x3.0mm" H 7350 2100 50  0001 C CNN
+F 3 "~" H 7350 2100 50  0001 C CNN
+	1    7150 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 2100 7150 2150
 $EndSCHEMATC
