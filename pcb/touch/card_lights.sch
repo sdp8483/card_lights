@@ -570,21 +570,10 @@ Wire Notes Line style solid
 	7000 3050 7000 3500
 Text Notes 8850 2450 0    50   ~ 0
 For touch pad use flood fill on PCB back
-$Comp
-L Device:D D7
-U 1 1 5FF0713E
-P 5250 2400
-F 0 "D7" H 5250 2500 50  0000 C CNN
-F 1 "D" H 5250 2300 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123F" H 5250 2400 50  0001 C CNN
-F 3 "~" H 5250 2400 50  0001 C CNN
-	1    5250 2400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	5000 2400 5100 2400
+	5000 2400 5150 2400
 Wire Wire Line
-	5400 2400 5500 2400
+	5350 2400 5500 2400
 $Comp
 L Connector:TestPoint TP4
 U 1 1 5FF0CDEF
@@ -704,4 +693,17 @@ Wire Notes Line
 	1400 4150 4000 4150
 Wire Notes Line
 	4000 4150 4000 5500
+$Comp
+L Device:Jumper_NC_Small JP1
+U 1 1 5FFB6D8B
+P 5250 2400
+F 0 "JP1" H 5250 2480 50  0000 C CNN
+F 1 "PROG" H 5260 2340 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 5250 2400 50  0001 C CNN
+F 3 "~" H 5250 2400 50  0001 C CNN
+	1    5250 2400
+	1    0    0    -1  
+$EndComp
+Text Notes 4750 2200 0    50   ~ 0
+Cut jumper before programming
 $EndSCHEMATC
