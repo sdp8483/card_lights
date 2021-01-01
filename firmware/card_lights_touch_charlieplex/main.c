@@ -21,6 +21,8 @@
  * 
  */
 
+#define F_CPU 1000000UL     /* for delay funcitons */
+
 #include <stdint.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
