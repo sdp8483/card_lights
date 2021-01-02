@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name pl_pogo)(type KiCad)(uri ${KIPRJMOD}/lib_fp/pl_pogo.pretty)(options "")(descr ""))
+)

@@ -1,0 +1,58 @@
+{
+  "Header":
+  {
+    "GenerationSoftware":
+    {
+      "Vendor":      "KiCad",
+      "Application": "Pcbnew",
+      "Version":     "5.1.9"
+    },
+    "CreationDate":  "2021-01-01T19:32:21-05:00"
+  },
+  "GeneralSpecs":
+  {
+    "ProjectId":
+    {
+      "Name": "pogo_programmer",
+      "GUID": "706f676f-5f70-4726-9f67-72616d6d6572",
+      "Revision": "rev?"
+    },
+    "Size":
+    {
+      "X": 22.050,
+      "Y": 12.050
+    },
+    "LayerNumber": 2,
+    "BoardThickness":  1.600
+  },
+  "DesignRules":
+  [
+    {
+      "Layers": "Outer",
+      "PadToPad":  0.200,
+      "PadToTrack":  0.200,
+      "TrackToTrack":  0.200,
+      "MinLineWidth":  0.500
+    }
+  ],
+  "FilesAttributes":
+  [
+    {
+      "Path":  "pogo_programmer-B_Cu.gbr",
+      "FileFunction":  "Copper,L2,Bot",
+      "FilePolarity":  "Positive"
+    },
+    {
+      "Path":  "pogo_programmer-Edge_Cuts.gbr",
+      "FileFunction":  "Profile",
+      "FilePolarity":  "Positive"
+    }
+  ],
+  "MaterialStackup":
+  [
+    {
+      "Type":  "Copper",
+      "Notes":  "Layer B.Cu"
+    }
+  ]
+}
